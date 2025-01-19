@@ -21,6 +21,12 @@ if [ ! -d "$LOCAL_DIR" ]; then
   npm run build
 fi
 
+rsync -avz --progress --delete \
+  --exclude '.DS_Store' \
+  --exclude '._*' \
+  --exclude '__MACOSX' \
+  "$LOCAL_DIR/" "$SSH_ALIAS:$REMOTE_DIR/$DEFAULT_LOCAL_DIR" > /dev/null 2>&1
+  
 rsync -avz --progress --delete "package.json" "$SSH_ALIAS:$REMOTE_DIR/"
 rsync -avz --progress --delete "ecosystem.config.js" "$SSH_ALIAS:$REMOTE_DIR/"
 

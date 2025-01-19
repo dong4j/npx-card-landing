@@ -9,7 +9,7 @@ export function ApiStatus() {
   useEffect(() => {
     const checkStatus = async () => {
       try {
-        const response = await fetch('https://api.kokorotts.com/docs')
+        const response = await fetch('https://oneapi.dong4j.ink:1024/api/check')
         setIsUp(response.ok)
       } catch {
         setIsUp(false)
@@ -18,7 +18,7 @@ export function ApiStatus() {
 
     checkStatus()
     // Check status every 30 seconds
-    const interval = setInterval(checkStatus, 30000)
+    const interval = setInterval(checkStatus, 60000)
 
     return () => clearInterval(interval)
   }, [])

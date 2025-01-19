@@ -66,6 +66,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="canonical" href="https://home.dong4j.site" />
+        <script defer src="https://cdn.dong4j.site/source/static/umami.self.js" data-host-url="https://umami.dong4j.ink:1024" data-website-id="5ec968a8-2eb3-4137-b535-2c3143d3f905"></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
