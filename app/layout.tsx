@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "npx dong4j - An electronic business card containing personal information",
   description: "No need to globally install dependency packages, quick to run and display personal information.",
   keywords: "npx dong4j, npx, dong4j, personal information, business card, no install, quick run",
-  authors: [{ name: "syv.ai" }],
+  authors: [{ name: "dong4j" }],
   creator: "npx dong4j",
   publisher: "npx dong4j",
   formatDetection: {

@@ -19,7 +19,7 @@ export default function LandingPage() {
           <div className="flex items-center space-x-4">
             <a href="#features" className="hover:text-blue-400 transition-colors">Features</a>
             <a href="#usage" className="hover:text-blue-400 transition-colors">Usage</a>
-            <a href="https://home.dong4j.site" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">HomePage</a>
+            <a href="https://home.dong4j.site" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Home</a>
             <a href="https://github.com/dong4j/npx-card" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">GitHub</a>
             <a href="https://blog.dong4j.site" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">Blog</a>
           </div>
