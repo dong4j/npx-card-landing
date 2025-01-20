@@ -1,3 +1,7 @@
+const dotenv = require('dotenv');
+
+dotenv.config();
+
 module.exports = {
     apps: [
       {
@@ -6,9 +10,9 @@ module.exports = {
         version: '1.0.0', // 应用版本
         script: '/bin/bash', // 通过 bash 执行命令，避免路径问题
         args: '-c "npm run start"', // 通过 bash 执行 npm run start
-        cwd: '/mnt/4.860.ssd/npx-card-landing', // 当前工作目录
+        cwd: process.env.CWD,
         env: {
-          PORT: 6661, // 设置监听的端口
+          PORT: process.env.PORT
         },
         exec_mode: "fork",
         instances: 1, // 应用实例数量
