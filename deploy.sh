@@ -15,11 +15,7 @@ SSH_ALIAS="${1:-$DEFAULT_SSH_ALIAS}"
 REMOTE_DIR="${2:-$DEFAULT_REMOTE_DIR}"     
 LOCAL_DIR="${3:-$DEFAULT_LOCAL_DIR}" 
 
-# 检查本地目录是否存在
-if [ ! -d "$LOCAL_DIR" ]; then
-  echo "Local config directory '$LOCAL_DIR' not found, exec: npm run build"
-  npm run build
-fi
+rm -rf $DEFAULT_LOCAL_DIR && npm run build
 
 rsync -avz --progress --delete \
   --exclude '.DS_Store' \
