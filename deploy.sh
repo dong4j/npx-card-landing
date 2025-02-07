@@ -25,13 +25,14 @@ rsync -avz --progress --delete \
   
 rsync -avz --progress --delete "package.json" "$SSH_ALIAS:$REMOTE_DIR/"
 rsync -avz --progress --delete "ecosystem.config.js" "$SSH_ALIAS:$REMOTE_DIR/"
+rsync -avz --progress --delete ".env" "$SSH_ALIAS:$REMOTE_DIR/"
 
 # 上传完成
 echo "Upload complete."
 
 ssh "$SSH_ALIAS" "source ~/.nvm/nvm.sh && pm2 start $DEFAULT_REMOTE_DIR/ecosystem.config.js"
 if [ $? -ne 0 ]; then
-  echo "Error: Failed to reload audioServer on server '$SSH_ALIAS'."
+  echo "Error: Failed to reload server '$SSH_ALIAS'."
   exit 1
 fi
 
