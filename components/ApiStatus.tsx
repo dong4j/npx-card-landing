@@ -9,7 +9,7 @@ export function ApiStatus() {
   useEffect(() => {
     const checkStatus = async () => {
       try {
-        const response = await fetch('https://oneapi.dong4j.ink:1024/api/check')
+        const response = await fetch('https://api.dong4j.site/npx/ping')
         setIsUp(response.ok)
       } catch {
         setIsUp(false)
